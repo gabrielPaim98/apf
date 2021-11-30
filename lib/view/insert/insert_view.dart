@@ -20,6 +20,28 @@ class _InsertViewState extends State<InsertView> {
   final TextEditingController _tdController = TextEditingController(text: '0');
 
   final TextEditingController _arController = TextEditingController(text: '0');
+  @override
+  void initState() {
+    _tdController.addListener(() {
+      if (_tdController.text.isNotEmpty &&
+          double.tryParse(_tdController.text) != null &&
+          double.parse(_tdController.text) >= 0) {
+        setState(() {
+          funcao.td = double.parse(_tdController.text);
+        });
+      }
+    });
+    _arController.addListener(() {
+      if (_arController.text.isNotEmpty &&
+          double.tryParse(_arController.text) != null &&
+          double.parse(_arController.text) >= 0) {
+        setState(() {
+          funcao.tr = double.parse(_arController.text);
+        });
+      }
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
