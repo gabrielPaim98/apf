@@ -2,7 +2,7 @@ enum Complexidade { BAIXA, MEDIA, ALTA }
 
 enum TipoFuncao { ALI, AIE, EE, SE, CE }
 
-enum TipoManutencao { I, A, E }
+enum TipoManutencao { INCLUSAO, ALTERACAO, EXCLUSAO }
 
 class Aplicacao {
   String nome = '';
@@ -29,7 +29,7 @@ class Funcao {
 
   String nome = '';
   TipoFuncao tipoFuncao = TipoFuncao.ALI;
-  TipoManutencao tipoManutencao = TipoManutencao.I;
+  TipoManutencao tipoManutencao = TipoManutencao.INCLUSAO;
   double tipoDado = 0;
   double arquivosReferenciados = 0;
 
