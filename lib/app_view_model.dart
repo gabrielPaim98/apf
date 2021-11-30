@@ -4,7 +4,6 @@ import 'model/funcao.dart';
 
 class AppViewModel extends ChangeNotifier {
   Aplicacao aplicacao = Aplicacao();
-
   void setNomeAplicacao(String name) {
     aplicacao.nome = name;
     notifyListeners();
@@ -30,26 +29,28 @@ List<Funcao> mockFunc = [
   Funcao(
     nome: 'Cadastrar Paciente',
     tipoFuncao: TipoFuncao.EE,
-    tipoManutencao: TipoManutencao.I,
+    td: 2,
+    tr: 3,
+    tipoManutencao: TipoManutencao.INCLUSAO,
   ),
   Funcao(
     nome: 'Cadastrar Atendimento',
     tipoFuncao: TipoFuncao.EE,
-    tipoManutencao: TipoManutencao.I,
+    tipoManutencao: TipoManutencao.INCLUSAO,
   ),
   Funcao(
     nome: 'Consultar Atendimento Previstos',
     tipoFuncao: TipoFuncao.CE,
-    tipoManutencao: TipoManutencao.I,
+    tipoManutencao: TipoManutencao.INCLUSAO,
   ),
   Funcao(
     nome: 'Consultar Diagnosticos',
     tipoFuncao: TipoFuncao.CE,
-    tipoManutencao: TipoManutencao.I,
+    tipoManutencao: TipoManutencao.INCLUSAO,
   ),
   Funcao(
     nome: 'Horas Trabalhadas por médico',
     tipoFuncao: TipoFuncao.SE,
-    tipoManutencao: TipoManutencao.A,
+    tipoManutencao: TipoManutencao.ALTERACAO,
   ),
 ];
