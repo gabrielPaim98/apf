@@ -32,8 +32,8 @@ class _InsertViewState extends State<InsertView> {
         onPressed: () {
           if (_formKey.currentState!.validate()) {
             funcao.nome = _nameController.text;
-            funcao.tipoDado = double.parse(_tdController.text);
-            funcao.arquivosReferenciados = double.parse(_arController.text);
+            funcao.td = double.parse(_tdController.text);
+            funcao.tr = double.parse(_arController.text);
             context.read<AppViewModel>().addFuncao(funcao);
             Navigator.pop(context);
           }
